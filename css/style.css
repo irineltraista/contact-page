@@ -1,0 +1,393 @@
+body {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+section.contact-section{
+    display:flex;
+    justify-content: center;
+    overflow:clip;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 1100px;
+    padding: calc(var(--padding-xxl) * 1.8) var(--padding-xl);
+    
+}
+
+.main-container .title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 0px calc(var(--margin-xxl) * 1.5) 0px;
+    padding:0px var(--padding-sm);
+    gap: .5em;
+    text-align: center;
+}
+
+.main-container .title-box h1 span {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(145, 108, 226, 1) 48%, rgba(166, 84, 225, 1) 100%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 8s ease-in-out infinite;
+}
+
+.main-container .contact-section {
+    display: flex;
+    gap: 50px;
+    padding: var(--padding-xxl) var(--padding-xl) var(--padding-xxl) var(--padding-xxl);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid #a704f207;
+    backdrop-filter: blur(80px);
+    border-radius: 20px;
+}
+
+
+/*Form box*/
+.form-heading-box {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    margin-bottom: var(--margin-xl);
+}
+
+.main-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.main-contact-form .form-input input,
+.main-contact-form .form-input textarea {
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.main-contact-form legend {
+    padding: 0;
+}
+
+.main-contact-form fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+
+.main-contact-form fieldset.twocol {
+    display: flex;
+    gap: inherit;
+}
+
+.main-contact-form fieldset.form-radio-input {
+    display: flex;
+    gap: 15px;
+    margin: var(--margin-sm) 0px;
+}
+
+.main-contact-form fieldset.form-radio-input legend {
+    padding-bottom: var(--margin-sm);
+}
+
+.main-contact-form fieldset.form-radio-input input[type="radio"] {
+    display: none;
+}
+
+.main-contact-form fieldset.form-radio-input input[type="radio"] + label {
+    display: flex;
+    padding: var(--padding-md) var(--padding-md) var(--padding-md) var(--padding-xl);
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    line-height: .8em;
+    font-size: .9em;
+    cursor: pointer;
+    user-select: none
+}
+
+.main-contact-form fieldset.form-radio-input .radio-item label:before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    height: 6px;
+    width: 6px;
+    outline: max(1px, 0.1em) solid rgba(255, 255, 255, 0.5);
+    outline-offset: max(3px, 0.15em);
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all .5s;
+}
+
+.main-contact-form fieldset.form-radio-input input[type="radio"]:checked+label {
+    border-color: var(--accent-light-color);
+    background-color: var(--transparent-color);
+    transition: all .5s;
+}
+
+.main-contact-form fieldset.form-radio-input input[type="radio"]:checked+label:before {
+    background-color: var(--accent-light-color);
+    outline-color: var(--accent-light-color);
+    transition: all .5s;
+}
+
+
+.main-contact-form .form-input {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    width: 100%;
+}
+
+
+.main-contact-form .form-input label, .main-contact-form .form-input textarea label {
+    height:fit-content;
+    position: absolute;
+    top: -8px;
+    left: var(--margin-sm);
+    font-size: .78em;
+    background-color: var(--accent-light-color);
+    width: fit-content;
+    transition: all .3s ;
+    padding:2px 5px;
+    border-radius: 3px;
+  }
+  .main-contact-form .form-input input[placeholder=" "]:not(:focus):placeholder-shown + label, .main-contact-form .form-input textarea[placeholder=" "]:not(:focus):placeholder-shown + label {
+    top:0px;
+    bottom:0px;
+    margin:auto;
+    background-color: transparent;
+    font-size: 1em;
+    pointer-events: none;
+    opacity: .5;
+    height:fit-content;
+    transition: all .3s ;
+}
+.main-contact-form .form-input textarea[placeholder=" "]:not(:focus):placeholder-shown + label{
+    margin-top:var(--margin-sm);
+}
+
+.main-contact-form .submit-btn button[type="submit"] {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: var(--primary-color);
+    background: linear-gradient(to right, var(--accent-light-color), var(--accent-dark-color));
+    background-repeat: no-repeat;
+    background-position: 100%;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.main-contact-form .submit-btn button[type="submit"]:hover {
+    animation: gradient-animation 1s ease-in-out;
+
+}
+
+.main-contact-form .submit-btn button[type="submit"]:hover img {
+    animation: rocket-animation 4s ease-in-out;
+}
+
+.main-contact-form .submit-btn img.rocketlaunch {
+    max-width: 30px;
+}
+
+
+/*Testimonial*/
+.testimonial-wrapper {
+    display: flex;
+    align-items: flex-end;
+    min-height: 300px;
+    padding: var(--padding-xxl) var(--padding-xl);
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    background-image: url('../images/astronaut.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 20px -12px rgba(117, 58, 245, 0.25);
+    transition:.5s;
+}
+.testimonial-wrapper:hover{
+    box-shadow: 0 0 70px -12px rgba(117, 58, 245, 0.20);
+}
+
+.testimonial-wrapper:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, var(--secondary-color) 35%, var(--transparent-color) 65%);
+}
+
+.testimonial-wrapper .testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    z-index: 1;
+}
+
+.testimonial-wrapper .testimonial .testimonial-author {
+    font-weight: 600;
+}
+
+/*Blur Items*/
+.space-blur {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    pointer-events: none;
+    filter: blur(140px);
+}
+.space-blur.blur-item-top-r {
+    border-radius: 100%;
+    background-color: var(--accent-light-color);
+    right: -30px;
+    top: 200px;
+    z-index: -1;
+    animation: blur-top-right 20s  ease-in-out infinite;
+}
+.space-blur.blur-item-top-l {
+    border-radius: 100%;
+    background-color: var(--accent-dark-color);
+    left: -20px;
+    top: 200px;
+    z-index: -1;
+    animation: blur-top-left 15s  ease-in-out infinite;
+}
+.space-blur.blur-item-bottom-l {
+    border-radius: 100%;
+    background-color: var(--accent-light-color);
+    left: -20px;
+    bottom: 20px;
+    z-index: -1;
+}
+
+
+
+
+/*Tab/Mobile*/
+@media(max-width:767px) {
+    .main-container {
+        padding: calc(var(--padding-xxl)* 1.2) var(--padding-lg);
+    }
+
+    .main-container .contact-section {
+        flex-wrap: wrap;
+        padding: var(--padding-lg);
+    }
+    .space-blur {
+        width: 100px;
+        height: 100px;
+        filter: blur(100px);
+    }
+    .space-blur.blur-item-top-r {
+        right:0px;
+    }
+    .space-blur.blur-item-top-l {
+        left:0px;
+    }
+
+}
+
+@media(max-width:480px) {
+    .main-container {
+        padding: var(--padding-xxl) var(--padding-md);
+    }
+    .main-contact-form fieldset.twocol {
+        flex-direction: column;
+    }
+    .testimonial-wrapper{
+        padding: var(--padding-xxl) var(--padding-lg);
+        border-radius: 10px;
+    }
+    .main-container .title-box{
+        margin: 0px 0px  var(--margin-xxl) 0px;
+    }
+}
+
+/*Animations*/
+@keyframes gradient-animation {
+    0% {
+        background-size: 100%;
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-size: 200%;
+        background-position: 100% 0%;
+
+    }
+
+    100% {
+        background-size: 100%;
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes rocket-animation {
+    0% {
+        transform: translateX(0px);
+    }
+
+    33% {
+        transform: translateX(33px) rotate(-45deg);
+    }
+
+    60% {
+        transform: translateX(300px) translateY(-200px) rotate(-45deg);
+
+    }
+
+    100% {
+        transform: translateX(0px) rotate(0deg);
+    }
+}
+
+@keyframes blur-top-right {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+        top:80%;
+        right:10%;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes blur-top-left {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.8);
+        
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}

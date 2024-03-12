@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/global.css">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>CSS Form Homework - Irinel Traista</title>
+</head>
+
+<body>
+    <section class="contact-section">
+    <div class="main-container">
+        <div class="title-box">
+            <h1 class="gradient">Get in <span>touch</span></h1>
+            <p class="subheading">Reach out, and let's create a universe of possibilities together!</p>
+        </div>
+        <div class="contact-section">
+            <div class="contact-form-wrapper">
+                <div class="form-heading-box">
+                    <h2>Let’s connect constellations</h2>
+                    <p>Let's align our constellations! Reach out and let the magic of collaboration illuminate our
+                        skies.</p>
+                </div>
+                <form action="" method="post" class="main-contact-form">
+                    <fieldset class="twocol">
+                        <div class="form-input">
+                            <input type="text" id="fname" name="fname" placeholder=" " required>
+                            <label for="fname">First name*</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="text" id="lname" name="lname" placeholder=" " required>
+                            <label for="lname">Last name*</label>
+                        </div>
+                    </fieldset>
+                    <div class="form-input">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">Email*</label>                 
+                    </div>
+                    <div class="form-input">
+                        <input type="tel" id="phone" name="phone" pattern="^\+?4?0?(7[0-8]\d{7}|2[0-9]{8}|3[0-9]{8})$" title="Enter a valid Romanian phone number." placeholder=" "required>
+                        <label for="phone">Phone Number*</label>
+                    </div>
+                    <fieldset class="form-radio-input">
+                        <legend>Preffered contact method*</legend>
+                        <div class="radio-item">
+                            <input type="radio" id="contactPhone" value="contactPhone" name="contactmethod" required>
+                            <label for="contactPhone">Phone</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="contactEmail" value="contactEmail" name="contactmethod">
+                            <label for="contactEmail">Email</label>
+                        </div>
+                    </fieldset>
+                    <div class="form-input">
+                        <textarea id="message" name="message" rows="5" minlength="100" placeholder=" " required></textarea>
+                        <label for="message">Message*</label>
+                    </div>
+                    <div class="submit-btn">
+                        <button type="submit" id="sendform">
+                        Send it to the moon
+                        <img src="./images/rocket.png" class="rocketlaunch">
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="testimonial-wrapper">
+                <div class="testimonial">
+                    <p>“Two lunar months revealed Earth's fragile beauty against vast silence, transforming my view of
+                        our place in the universe.”</p>
+                    <p class="testimonial-author">Irinel Traista</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="space-blur blur-item-top-l"></div>
+        <div class="space-blur blur-item-bottom-l"></div>
+        <div class="space-blur blur-item-top-r"></div>
+    </div>
+    </section>
+</body>
+
+</html>
